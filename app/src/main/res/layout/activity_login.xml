@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context="com.itaem.administrator.restaurantbooking.LoginActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/et_phone"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="管理员手机号"
+            android:background="@null"
+            android:maxLength="11"/>
+        <ImageView
+            android:layout_weight="2"
+            android:id="@+id/iv_delete"
+            android:layout_gravity="center"
+            android:src="@mipmap/delete"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <Button
+            android:layout_weight="1.5"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:id="@+id/bt_getVC"
+            android:onClick="getVerificationCode"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/round_button"
+            android:text="获取验证码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_VerificationCode"
+        android:hint="验证码"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="5dp"
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <Button
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:onClick="login"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
+        android:text="登陆"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
